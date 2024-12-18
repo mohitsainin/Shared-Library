@@ -1,8 +1,13 @@
 def call(String mavenToolName) {
     script {
         // Get the Maven tool path
-        def mvnHome = tool mavenToolName
+        def mvnHome = tool name: mavenToolName, type: 'Maven'
         
+        // Check if the tool is found
+        if (mvnHome == null) {
+            error "Maven tool not found. Please ensure the tool is configured in Jenkins."
+        }
+
         // Compile the project
         sh "${mvnHome}/bin/mvn compile"
         
