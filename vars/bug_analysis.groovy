@@ -9,7 +9,7 @@ def call(String sonarServerName) {
             -Dsonar.login=squ_4f371ade2db48dafec85157cda9d3d07e6a5c456 \
             -Dsonar.java.binaries=target/classes \
             -Dsonar.issue.types=CODE_SMELL \
-            -Dsonar.report.export.path=target/static-code-analysis-report.json
+            -Dsonar.report.export.path=target/bugs-analysis-report.json
         """
       
     }
