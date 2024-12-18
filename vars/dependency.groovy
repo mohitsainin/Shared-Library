@@ -5,8 +5,6 @@ def call(String mavenToolName) {
              
         sh "${mvnHome}/bin/mvn compile"
         sh "${mvnHome}/bin/mvn org.owasp:dependency-check-maven:check -Dformat=HTML"
-        
-        
-        archiveArtifacts artifacts: 'target/dependency-check-report.html', allowEmptyArchive: true
-    }
+              
+            }
 }
