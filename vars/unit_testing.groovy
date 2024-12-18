@@ -4,7 +4,7 @@ def call(String mavenToolName) {
         def mvnHome = tool mavenToolName
              
         sh "${mvnHome}/bin/mvn compile"
-              
-        sh "${mvnHome}/bin/mvn test | tee unit-test-report.txt"
+        sh "${mvnHome}/bin/mvn test | tee target/unit-test-report.txt"      
+        
     }
 }
