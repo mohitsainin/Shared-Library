@@ -1,6 +1,6 @@
 def call() {
-    withSonarQubeEnv('SonarQube') {
-        def scannerHome = tool name: 'sonar', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+    withSonarQubeEnv('Sonar') {
+        def scannerHome = tool name: 'Sonar', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
         sh """
             ${scannerHome}/bin/sonar-scanner \
             -Dsonar.projectKey=salary-api \
