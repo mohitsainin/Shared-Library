@@ -12,6 +12,7 @@ def call(String mavenToolName) {
                 echo "Compilation failed. No compiled classes found." >> target/compile-report.txt
             fi
         """
-         cat compilation-report.txt
+            
+        sh "cat target/compile-report.txt"
     }
 }
