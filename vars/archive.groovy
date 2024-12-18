@@ -1,3 +1,3 @@
 def call() {
-       archiveArtifacts artifacts: 'target/dependency-check-report.html', allowEmptyArchive: true
+       archiveArtifacts artifacts: 'target/report.txt', allowEmptyArchive: true
     }
