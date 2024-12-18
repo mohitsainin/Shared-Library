@@ -2,8 +2,7 @@ def call(String mavenToolName) {
     script {
         def mvnHome = tool mavenToolName
         sh "${mvnHome}/bin/mvn compile"
-        
-        // Generate the compilation report
+              
         sh """
             echo "Compilation Report" > target/compile-report.txt
             echo "Maven compile phase completed successfully." >> target/compile-report.txt
