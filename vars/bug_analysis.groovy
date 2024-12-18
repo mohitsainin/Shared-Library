@@ -10,6 +10,7 @@ def call(String sonarServerName) {
             -Dsonar.java.binaries=target/classes \
             -Dsonar.issue.types=CODE_SMELL \
             -Dsonar.report.export.path=target/bugs-analysis-report.json
+            > sonar_analysis_output.log 2>&1
         """
       
     }
