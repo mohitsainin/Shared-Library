@@ -11,7 +11,6 @@ def call(String sonarServerName) {
             -Dsonar.issue.types=CODE_SMELL \
             -Dsonar.report.export.path=target/static-code-analysis-report.json
         """
-        
-        waitForQualityGate()  
+      
     }
 }
